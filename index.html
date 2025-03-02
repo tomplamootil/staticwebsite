@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Halo World</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .halo {
+    font-size: 72px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    animation: animate 2s linear infinite;
+  }
+
+  .halo:before {
+    content: "Hello, World!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #f00;
+    animation: animate 2s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      text-shadow: 0 0 10px #ff0000,
+                   0 0 20px #ff6600,
+                   0 0 30px #ffcc00,
+                   0 0 40px #00ff00,
+                   0 0 50px #0099ff,
+                   0 0 60px #6633ff,
+                   0 0 70px #ff33cc,
+                   0 0 80px #ff0066;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff0000,
+                   0 0 40px #ff6600,
+                   0 0 60px #ffcc00,
+                   0 0 80px #00ff00,
+                   0 0 100px #0099ff,
+                   0 0 120px #6633ff,
+                   0 0 140px #ff33cc,
+                   0 0 160px #ff0066;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="halo"></div>
+</body>
+</html>
